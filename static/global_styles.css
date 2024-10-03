@@ -1,0 +1,40 @@
+:root
+{
+    --accent-grey: #616161;
+    --mario-red: #E0102F;
+    --luigi-green: #08A936;
+    --waluigi-purple: #5D2E8E;
+    --wario-yellow: #F5DA0F;
+    --text-white: rgb(235, 235, 235);
+    --backdrop-grey: rgb(58, 58, 58);
+}
+
+@font-face {
+    font-family: 'black-future';
+    src: url('/static/BlackFuture-gx1q3.otf') format('truetype');
+}
+
+*
+{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
+    background: rgb(97,97,97);
+    background: linear-gradient(0deg, rgba(97,97,97,1) 3%, rgba(224,16,47,1) 79%);
+    display: flex;
+    flex-direction: column;
+}
+
+.index-section
+{
+    width: 100vw;
+    height: 100vh;
+}
+
+

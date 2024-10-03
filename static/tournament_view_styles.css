@@ -1,0 +1,40 @@
+#thirty-two-bracket
+{
+    display: flex;
+    flex-direction: column;
+    max-height: 80vh;
+    flex-wrap: wrap;
+    width: 90vw;
+}
+
+.match{
+    background-color: rgba(0, 0, 0, 0.384);
+    display: flex;
+    flex-direction: row;
+    margin: 2px;
+    justify-content: center;
+    align-items: center;
+    font-family: 'black-future';
+    color: lightgrey;
+}
+
+.player-section
+{
+    margin: 5px;
+    justify-content: center;
+    align-items: center;
+}
+
+.match img {
+    max-height: 100px;
+    width: auto; /* Ensures the aspect ratio is maintained */
+    margin: 10px auto; /* Centers the image horizontally */
+}
+
+h1{
+    font-size: 20px;
+}
+
+
+
+

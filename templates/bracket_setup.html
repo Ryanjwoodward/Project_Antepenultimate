@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Antepenultimate</title>
+    <link rel="stylesheet" href="/static/global_styles.css">
+    <link rel="stylesheet" href="/static/bracket_setup_styles.css">
+    <link rel="stylesheet" href="/static/tournament_view_styles.css"
+  </head>
+  <body>
+
+    <section id="bracket-setup-primary">
+
+      <div id="initial-selection-window" class="selection-window">
+          <img src="/static/antepenultimate-logo.png" alt="Your Image Description" class="form-image">
+          <h1 class="form-title">Welcome to Antempenultimate!</h1>
+
+          <form id="create-load-view-form">
+            <div class="form-field-container">
+                <label for="create-bracket-form">Create a New Bracket:</label>
+                <input class="form-button" type="submit" id="create-new-bracket" name="create-bracket-frm" value="Create">
+            </div>
+            <!--
+            <div class="form-field-container">
+                <label for="load-bracket-form">Load a Previous Bracket:</label>
+                <input class="form-button" id="load-bracket" type="submit" name="load-bracket-frm" value="Load">
+            </div>
+            <div class="form-field-container">
+                <label for="view-history-form">View History:</label>
+                <input class="form-button" id="view-history-form" type="submit" name="view-history-frm" value="View">
+            </div>
+        -->
+          </form>     
+      </div>
+
+      <!-- CREATE A NEW BRACKET WINDOW -->
+      <div id="create-bracket" style="display: none;"> 
+        <div class="selection-window">
+            <img src="/static/antepenultimate-logo.png" alt="Your Image Description" class="form-image" style="height: 50px;">
+            <h1 class="form-title">Create a New Tournament Bracket</h1>
+    
+            <form id="create-game-form" onsubmit="createPlayerCharacterForm(event)">
+                <div class="form-field-container">
+                    <label for="total-entrants">Total Number of Entrants:</label>
+                    <input class="form-field" type="text" id="total-entrants" name="numEntrants" placeholder=" ">
+                </div>
+                <div class="form-field-container">
+                    <label for="num-players">Number of Players:</label>
+                    <input class="form-field" type="number" id="num-players" name="numPlayers" placeholder=" " required>
+                </div>
+                <!--
+                <div class="form-field-container">
+                    <label for="num-characters">Number of Characters per Player:</label>
+                    <input class="form-field" type="number" id="num-characters" name="numCharacters" placeholder=" " required>
+                </div>
+                -->
+                <div class="form-field-container">
+                    <label for="ssb-version">SSBB or SSBU:</label>
+                    <select class="form-field" id="ssb-version" name="ssbVersion">
+                        <option value="SSBU">SSBU</option>
+                        <option value="SSBB">SSBB</option>
+                    </select>
+                </div>
+                <div class="form-field-container" id="submit-btn-container">
+                    <input id="submit-bracket-config-button" type="submit" value="Submit">
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="selection-window" id="setup-characters-players" style="display: none;">
+        <img src="/static/antepenultimate-logo.png" alt="Your Image Description" class="form-image" style="height: 50px;">
+        <h1 class="form-title">Setup Players and Their Characters</h1>
+    
+        <form id="setup-characters-form">
+            <!-- This form will be populated with player and character fields -->
+             id = submit-setup-button
+             <!-- focus on 32 but if 16 then do a 16 bracket template, etc.-->
+        </form>
+    </div>
+    
+
+      <!-- SELECT INCOMPLETE TOURNEY -->
+      <div id="load-bracket" style="display: none;"></div>
+
+      <!-- VIEW HISTORY WINDOW -->
+      <div id="view-history" style="display: none;"></div>
+
+
+        <div id="tournament-bracket-view">
+            {% include 'thirty_two_bracket.html' %}
+
+        <div id="bracket-title">
+
+        </div>
+        
+      </div>
+
+    </section>
+
+
+    <script src="/static/app.js"></script>
+    <script src="/static/tournament_behavior.js"></script>
+  </body>
+</html>
